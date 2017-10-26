@@ -23,6 +23,11 @@ namespace alaska_airlines_test.Controllers
       ViewData["SortByDeparture"] = sort == "departure_time" ? "r_departure_time" : "departure_time";
       var flights = from flight in _context.Flight select flight;
 
+      ViewData["AllOrigins"] = await flights.Select(flight => flight.From).Distinct().ToListAsync();
+      ViewData["AllDestinations"] = await flights.Select(flight => flight.To).Distinct().ToListAsync();
+      ViewData["CurrentSearchFrom"] = "";
+      ViewData["CurrentSearchTo"] = "";
+
       if(!string.IsNullOrEmpty(from))
       {
         flights = flights.Where(flight => flight.From == from);
