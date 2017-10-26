@@ -16,12 +16,23 @@ namespace alaska_airlines_test.Controllers
     }
     // GET: /flights
 
-    public async Task<IActionResult> Index(string sort)
+    public async Task<IActionResult> Index(string sort, string from, string to)
     {
       ViewData["SortByMainCabinPrice"] = sort == "main_cabin_price" ? "r_main_cabin_price" : "main_cabin_price";
       ViewData["SortByFirstClassPrice"] = sort == "first_class_price" ? "r_first_class_price" : "first_class_price";
       ViewData["SortByDeparture"] = sort == "departure_time" ? "r_departure_time" : "departure_time";
       var flights = from flight in _context.Flight select flight;
+
+      if(!string.IsNullOrEmpty(from))
+      {
+        flights = flights.Where(flight => flight.From == from);
+        ViewData["CurrentSearchFrom"] = from;
+      }
+      if(!string.IsNullOrEmpty(to))
+      {
+        flights = flights.Where(flight => flight.To == to);
+        ViewData["CurrentSearchTo"] = to;
+      }
 
       switch (sort)
       {
@@ -48,13 +59,6 @@ namespace alaska_airlines_test.Controllers
           break;
       }
       return View(await flights.AsNoTracking().ToListAsync());
-    }
-
-    public IActionResult Search(string orig, string dest)
-    {
-      ViewData["origin"] = orig;
-      ViewData["destination"] = dest;
-      return View();
     }
   }
 }
