@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Encodings.Web;
 
-namespace alaska_airlines_test
+namespace alaska_airlines_test.Controllers
 {
   public class FlightsController : Controller
   {
@@ -12,9 +12,11 @@ namespace alaska_airlines_test
       return View();
     }
 
-    public string Search(string orig, string dest)
+    public IActionResult Search(string orig, string dest)
     {
-      return HtmlEncoder.Default.Encode($"results for flights from {orig} to {dest}...");
+      ViewData["origin"] = orig;
+      ViewData["destination"] = dest;
+      return View();
     }
   }
 }
