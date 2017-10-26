@@ -1,0 +1,10 @@
+/home/ryan/code/alaska-airlines-test/bin/Debug/netcoreapp2.0/alaska-airlines-test.deps.json
+/home/ryan/code/alaska-airlines-test/bin/Debug/netcoreapp2.0/alaska-airlines-test.runtimeconfig.json
+/home/ryan/code/alaska-airlines-test/bin/Debug/netcoreapp2.0/alaska-airlines-test.runtimeconfig.dev.json
+/home/ryan/code/alaska-airlines-test/bin/Debug/netcoreapp2.0/alaska-airlines-test.dll
+/home/ryan/code/alaska-airlines-test/bin/Debug/netcoreapp2.0/alaska-airlines-test.pdb
+/home/ryan/code/alaska-airlines-test/obj/Debug/netcoreapp2.0/alaska-airlines-test.csproj.CoreCompileInputs.cache
+/home/ryan/code/alaska-airlines-test/obj/Debug/netcoreapp2.0/alaska-airlines-test.AssemblyInfoInputs.cache
+/home/ryan/code/alaska-airlines-test/obj/Debug/netcoreapp2.0/alaska-airlines-test.AssemblyInfo.cs
+/home/ryan/code/alaska-airlines-test/obj/Debug/netcoreapp2.0/alaska-airlines-test.dll
+/home/ryan/code/alaska-airlines-test/obj/Debug/netcoreapp2.0/alaska-airlines-test.pdb
