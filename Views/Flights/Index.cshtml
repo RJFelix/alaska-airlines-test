@@ -1,3 +1,5 @@
+@model IEnumerable<alaska_airlines_test.Models.Flight>
+
 @{
   ViewData["Title"] = "Flight Directory";
 }
@@ -5,3 +7,59 @@
 <h2>Flight Directory</h2>
 
 <p>This is a directory of flights.</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>
+        @Html.DisplayNameFor(model => model.FlightNumber)
+      </th>
+      <th>
+        @Html.DisplayNameFor(model => model.From)
+      </th>
+      <th>
+        @Html.DisplayNameFor(model => model.To)
+      </th>
+      <th>
+        @Html.DisplayNameFor(model => model.Departs)
+      </th>
+      <th>
+        @Html.DisplayNameFor(model => model.Arrives)
+      </th>
+      <th>
+        @Html.DisplayNameFor(model => model.MainCabinPrice)
+      </th>
+      <th>
+        @Html.DisplayNameFor(model => model.FirstClassPrice)
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var item in Model)
+    {
+      <tr>
+        <td>
+          @Html.DisplayFor(modelItem => item.FlightNumber)
+        </td>
+        <td>
+          @Html.DisplayFor(modelItem => item.From)
+        </td>
+        <td>
+          @Html.DisplayFor(modelItem => item.To)
+        </td>
+        <td>
+          @Html.DisplayFor(modelItem => item.Departs)
+        </td>
+        <td>
+          @Html.DisplayFor(modelItem => item.Arrives)
+        </td>
+        <td>
+          @Html.DisplayFor(modelItem => item.MainCabinPrice)
+        </td>
+        <td>
+          @Html.DisplayFor(modelItem => item.FirstClassPrice)
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>
