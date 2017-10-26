@@ -7,16 +7,17 @@
 <h2>Flight Directory</h2>
 <hr />
 <form asp-action="Index" method="get">
-  <div class="form-actions">
+  <div class="form-group">
     <h4>Search</h4>
+    <!-- note - my reading indicates that this should be in the form
+         of an HTML helper (@Html.DropDownListFor). But I'm having a little
+         trouble figuring out exactly how that works within time constraints. Sorry! -->
     From: <select class="form-control" name="from">
       @foreach(var airport in @ViewData["AllOrigins"] as IEnumerable<String>) {
         <option value="@airport")>@airport</option>
       }
     </select>
-    <!-- From:  <input class="half-width" type="text" name="from" value="@ViewData["currentSearchFrom"]" /> -->
     <span style="width: 12px; display: inline-block"></span>
-    <!-- To:  <input class="half-width" type="text" name="to" value="@ViewData["currentSearchTo"]" /> -->
     To: <select class="form-control" name="to">
       @foreach(var airport in @ViewData["AllDestinations"] as IEnumerable<String>) {
         <option value="@airport")>@airport</option>
