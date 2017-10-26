@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using alaska_airlines_test.Models;
 
 namespace alaska_airlines_test
 {
@@ -22,6 +24,8 @@ namespace alaska_airlines_test
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            services.AddDbContext<FlightDbContext>(options => options.UseSqlite("Data Source=FlightData.db"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
