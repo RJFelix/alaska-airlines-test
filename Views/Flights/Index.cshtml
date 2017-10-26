@@ -5,19 +5,18 @@
 }
 
 <h2>Flight Directory</h2>
-
-<p>This is a directory of flights.</p>
-
+<hr />
 <form asp-action="Index" method="get">
   <div class="form-actions">
     <h4>Search</h4>
-    <p>From: <input type="text" name="from" value="@ViewData["currentSearchFrom"]" /></p>
-    <p>To: <input type="text" name="to" value="@ViewData["currentSearchTo"]" /></p>
-    <input type="submit" value="Search" class="btn btn-default" />
-    <a asp-action="Index" class="btn btn-secondary">Clear Search</a>
+    From:  <input class="half-width" type="text" name="from" value="@ViewData["currentSearchFrom"]" />
+    <span style="width: 12px; display: inline-block"></span>
+    To:  <input class="half-width" type="text" name="to" value="@ViewData["currentSearchTo"]" />
+    <p style="margin-top: 0.5em"><input type="submit" value="Search" class="btn btn-default" />
+    <a asp-action="Index" class="btn btn-secondary">Clear Search</a></p>
   </div>
 </form>
-
+<hr />
 <table class="table">
   <thead>
     <tr>

@@ -46,7 +46,7 @@ namespace alaska_airlines_test
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Flights}/{action=Index}/{id?}");
             });
         }
     }
