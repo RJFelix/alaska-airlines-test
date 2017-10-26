@@ -21,16 +21,22 @@
         @Html.DisplayNameFor(model => model.To)
       </th>
       <th>
+        <a href="?sort=@ViewData["SortByDeparture"]">
         @Html.DisplayNameFor(model => model.Departs)
+        </a>
       </th>
       <th>
         @Html.DisplayNameFor(model => model.Arrives)
       </th>
       <th>
+        <a href="?sort=@ViewData["SortByMainCabinPrice"]">
         @Html.DisplayNameFor(model => model.MainCabinPrice)
+        </a>
       </th>
       <th>
+        <a href="?sort=@ViewData["SortByFirstClassPrice"]">
         @Html.DisplayNameFor(model => model.FirstClassPrice)
+        </a>
       </th>
     </tr>
   </thead>
