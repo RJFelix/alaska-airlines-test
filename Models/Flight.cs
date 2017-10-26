@@ -8,8 +8,8 @@ namespace alaska_airlines_test.Models
     public int From { get; set; }
     public int To { get; set; }
     public int FlightNumber { get; set; }
-    public TimeSpan Departs { get; set; }
-    public TimeSpan Arrives { get; set; }
+    public DateTime Departs { get; set; }
+    public DateTime Arrives { get; set; }
     public int MainCabinPrice { get; set; }
     public int FirstClassPrice { get; set; }
   }
